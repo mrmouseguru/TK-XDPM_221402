@@ -18,6 +18,7 @@ public class AddUIConsoleInput {
         stdOut = new PrintWriter(new BufferedWriter(
             new OutputStreamWriter(System.out)), true);
         stdIn = new BufferedReader(new InputStreamReader(System.in));
+        addUseCaseControl = new AddUseCaseControl();
     }
 
     public void input() throws IOException {
@@ -32,7 +33,7 @@ public class AddUIConsoleInput {
         requestData.strNumber1 = strNumber1;
         requestData.strNumber2 = strNumber2;
 
-        addUseCaseControl
+        addUseCaseControl.execute(requestData);
 
         
     }
